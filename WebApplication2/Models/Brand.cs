@@ -1,8 +1,9 @@
-﻿namespace WebApplication2.Models
+﻿
+namespace WebApplication2.Models
 {
     public class Brand
     {
-        public int Id { get; set; }
+        public int BrandId { get; set; }
         
         public string _name;
         
@@ -13,6 +14,7 @@
                 {
                     throw new ArgumentOutOfRangeException(nameof(value), "Brand name must be at least three characters in length.");
                 }
+                _name = value;
             }
         }
 

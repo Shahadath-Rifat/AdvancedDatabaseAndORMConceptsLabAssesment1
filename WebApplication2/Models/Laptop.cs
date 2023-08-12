@@ -4,7 +4,7 @@ namespace WebApplication2.Models
 {
     public class Laptop
     {
-        public Guid Number { get; set; }
+        public Guid LaptopID { get; set; }
 
         private string _model;
         
@@ -17,6 +17,7 @@ namespace WebApplication2.Models
                 {
                     throw new ArgumentOutOfRangeException(nameof(value), "Laptop model name must be at least three characters in length.");
                 }
+                _model = value;
             }
         }
 
